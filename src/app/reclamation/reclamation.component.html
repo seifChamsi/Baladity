@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <form>
+        <div class="form-group">
+            <label for="Nom">Nom</label>
+            <input #nom type="text" class="form-control" id="Nom" aria-describedby="NomHelp">
+        </div>
+        <div class="form-group">
+            <label for="CIN">CIN</label>
+            <input #cin type="text" class="form-control" id="cin" aria-describedby="cinHelp">
+        </div>
+        <div class="form-group">
+            <label for="Email">Email address</label>
+            <input #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Type</label>
+            <select #type class="form-control" id="exampleFormControlSelect1">
+                <option>proprete</option>
+                <option>eclairage public</option>
+                <option>construction</option>
+                <option>anarchique</option>
+                <option>routes</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Description</span>
+            </div>
+            <textarea #desc class="form-control" aria-label="With textarea"></textarea>
+        </div>
+    <button type="button" (click) = "onSubmit(nom.value,email.value,cin.value,desc.value,type.value)" class="btn btn-primary">Submit</button>
+    </form>
+</div>
